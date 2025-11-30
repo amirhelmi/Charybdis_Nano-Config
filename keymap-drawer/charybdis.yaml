@@ -407,3 +407,5 @@ combos:
   k: Ctl+SPACE
 - p: [12, 17]
   k: {t: num, h: toggle}
+- p: [22, 21]
+  k: Alt+LEFT WIN
