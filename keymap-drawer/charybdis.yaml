@@ -387,7 +387,7 @@ combos:
   k: '&mkp LCLK'
 - p: [17, 18]
   k: {t: default, h: toggle}
-- p: [16, 17, 18]
+- p: [16, 26]
   k: Ctl+BACKSPACE
 - p: [27, 27, 28]
   k: '&mkp LCLK'
