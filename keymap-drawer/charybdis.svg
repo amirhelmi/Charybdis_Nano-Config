@@ -507,10 +507,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -988,10 +986,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -1462,10 +1458,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -1941,10 +1935,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -2419,10 +2411,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -2898,10 +2888,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -3381,10 +3369,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
@@ -3858,10 +3844,8 @@ path.combo {
 <text x="252" y="119" class="combo tap">DELETE</text>
 </g>
 <g class="combo combopos-42">
-<path d="M588,89 l-37,2" class="combo"/>
-<path d="M588,89 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
-<text x="588" y="89" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<text x="560" y="88" class="combo tap"><tspan style="font-size: 70%">&amp;switchwin</tspan></text>
 </g>
 <g class="combo combopos-43">
 <path d="M364,28 l-205,0" class="combo"/>
