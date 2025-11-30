@@ -2,12 +2,13 @@
 #include <input/processors.dtsi>
 
 #define DEF 0
-#define NAV 1
-#define SMN 2
-#define FUN 3
-#define MOU 4
+#define NUM 1
+#define NAV 2
+#define SWT 3
+#define FN 4
 #define SCR 5
 #define SNI 6
+#define BOOT 7
 
 / {
   split_inputs {
@@ -31,8 +32,8 @@
     };
 
     scroll {
-      layers = <SCR>;
-      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 8>, <&zip_xy_to_scroll_mapper>;
+      layers = <NAV>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 12>, <&zip_xy_to_scroll_mapper>;
     };
   };
 };
