@@ -360,7 +360,7 @@
 
         ctrlbacspac {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <16 17 18>;
+            key-positions = <16 26>;
         };
 
         righthandleftclick {
@@ -491,20 +491,6 @@
             label = "ALTTWO";
         };
 
-        altup: altup {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &kp UP_ARROW>;
-            label = "ALTUP";
-        };
-
-        altdown: altdown {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &kp DOWN>;
-            label = "ALTDOWN";
-        };
-
         althome: althome {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -524,34 +510,6 @@
             #binding-cells = <0>;
             bindings = <&sk LCTRL &kp BACKSPACE>;
             label = "CTRLBACK";
-        };
-
-        e2eruntsc: e2erun {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp N2 &kp E &kp SPACE &kp R &kp U &kp N &kp SPACE &kp T &kp S &kp C>;
-            label = "E2ERUN";
-        };
-
-        e2erunchrome: e2erunchrome {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp E &kp N2 &kp E &kp SPACE &kp R &kp U &kp N &kp SPACE &kp C &kp H &kp R &kp O &kp M &kp E>;
-            label = "E2ERUNCHROME";
-        };
-
-        ctrl_click: ctrl_click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "CTRL_CLICK";
         };
 
         tobase_space: tobase_space {
