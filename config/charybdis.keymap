@@ -653,9 +653,9 @@ behaviors {
 
         fn_layer {
     bindings = <
-&trans &trans &kp F11 &trans &trans &kp F12 &trans &trans &trans 
-&kp F9 &kp F5 &kp F1 &kp F3 &trans &trans &kp F2 &kp F10 &kp F4 &kp F8
-&trans &trans &trans &kp F7 &trans &trans &kp F6 &trans &trans &trans
+&trans &trans &kp F11 &trans &trans &trans &kp F12 &trans &trans &trans
+&kp F9 &kp F5 &kp F1 &kp F3 &trans &trans  &kp F2 &kp F10 &kp F4 &kp F8
+&trans &trans &kp F7 &trans &trans &trans &trans &kp F6 &trans &trans 
 &trans &trans &trans &trans &trans
     >;
 };
