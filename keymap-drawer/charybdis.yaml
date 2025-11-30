@@ -321,7 +321,7 @@ combos:
   k: ENTER
 - p: [16, 17, 34]
   k: {t: nav, h: toggle}
-- p: [15, 25]
+- p: [16, 26]
   k: {t: +, h: '*'}
 - p: [1, 11]
   k: INSERT
@@ -387,7 +387,7 @@ combos:
   k: '&mkp LCLK'
 - p: [17, 18]
   k: {t: default, h: toggle}
-- p: [16, 26]
+- p: [16, 17, 18]
   k: Ctl+BACKSPACE
 - p: [11, 12, 31]
   k: Sft+[
@@ -408,4 +408,6 @@ combos:
 - p: [12, 17]
   k: {t: num, h: toggle}
 - p: [22, 21]
-  k: Alt+LEFT WIN
+  k: Alt+TAB
+- p: [13, 16]
+  k: '&caps_word'

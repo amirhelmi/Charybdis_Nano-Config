@@ -383,9 +383,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -553,9 +553,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -616,9 +618,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -868,9 +874,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -1038,9 +1044,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -1101,9 +1109,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -1346,9 +1358,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -1516,9 +1528,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -1579,9 +1593,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -1829,9 +1847,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -1999,9 +2017,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -2062,9 +2082,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -2311,9 +2335,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -2481,9 +2505,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -2544,9 +2570,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -2794,9 +2824,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -2964,9 +2994,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -3027,9 +3059,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -3281,9 +3317,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -3451,9 +3487,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -3514,9 +3552,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
@@ -3762,9 +3804,9 @@ path.combo {
 </a><text x="540" y="140" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="462" y="106" width="28" height="26" class="combo"/>
-<text x="476" y="119" class="combo tap">+</text>
-<text x="476" y="130" class="combo hold">*</text>
+<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
+<text x="532" y="119" class="combo tap">+</text>
+<text x="532" y="130" class="combo hold">*</text>
 </g>
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="70" y="50" width="28" height="26" class="combo"/>
@@ -3932,9 +3974,11 @@ path.combo {
 </a><text x="616" y="98" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-49">
-<rect rx="6" ry="6" x="518" y="106" width="28" height="26" class="combo"/>
-<text x="532" y="119" class="combo tap">
-<tspan x="532" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="532" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+<path d="M588,89 l-37,2" class="combo"/>
+<path d="M588,89 l37,2" class="combo"/>
+<rect rx="6" ry="6" x="574" y="76" width="28" height="26" class="combo"/>
+<text x="588" y="89" class="combo tap">
+<tspan x="588" dy="-0.6em" style="font-size: 78%">Ctl+</tspan><tspan x="588" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
 </text>
 </g>
 <g class="combo combopos-50">
@@ -3995,9 +4039,13 @@ path.combo {
 </g>
 <g class="combo combopos-59">
 <rect rx="6" ry="6" x="98" y="130" width="28" height="26" class="combo"/>
-<text x="112" y="144" class="combo tap">
-<tspan x="112" dy="-0.6em" style="font-size: 88%">Alt+LEFT</tspan><tspan x="112" dy="1.2em" style="font-size: 88%">WIN</tspan>
-</text>
+<text x="112" y="144" class="combo tap">Alt+TAB</text>
+</g>
+<g class="combo combopos-60">
+<path d="M364,91 l-149,0" class="combo"/>
+<path d="M364,91 l149,0" class="combo"/>
+<rect rx="6" ry="6" x="350" y="78" width="28" height="26" class="combo"/>
+<text x="364" y="91" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 </g>
 </g>
