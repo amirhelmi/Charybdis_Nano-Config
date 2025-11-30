@@ -10,6 +10,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define DEF 0
+#define NUM 1
+#define NAV 2
+#define SWT 3
+#define FN 4
+#define SNI 5
+#define SCR 6
+#define BOOT 7
+
 // Layer-Tap and Mod-Tap Config Preferences
 
 &sk { quick-release; };
@@ -103,7 +112,7 @@
 
         rparenth {
             bindings = <&mt RIGHT_BRACKET RIGHT_PARENTHESIS>;
-            key-positions = <40 18 34>;
+            key-positions = <18 34>;
         };
 
         exclai {
@@ -113,7 +122,7 @@
 
         lparenth {
             bindings = <&mt LEFT_BRACKET LEFT_PARENTHESIS>;
-            key-positions = <37 11 31>;
+            key-positions = <11 31>;
         };
 
         copy {
@@ -130,7 +139,7 @@
 
         semicolon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <40 19 34>;
+            key-positions = <19 34>;
         };
 
         resetble {
@@ -155,12 +164,12 @@
 
         colonn {
             bindings = <&kp COLON>;
-            key-positions = <40 16 34>;
+            key-positions = <16 34>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <40 34 26>;
+            key-positions = <34 26>;
         };
 
         value {
@@ -170,7 +179,7 @@
 
         statementcombo {
             bindings = <&statement>;
-            key-positions = <40 8 34>;
+            key-positions = <8 34>;
         };
 
         enterr {
@@ -316,12 +325,12 @@
 
         switchwinright {
             bindings = <&switchwin>;
-            key-positions = <40 16 17 18>;
+            key-positions = <16 17 18>;
         };
 
         stickyfunlayer {
             bindings = <&sl 4>;
-            key-positions = <40 37 2 7>;
+            key-positions = <2 7>;
         };
 
         ctrlf4 {
@@ -331,12 +340,12 @@
 
         backcomb {
             bindings = <&mkp MB4>;
-            key-positions = <40 34 27>;
+            key-positions = <34 27>;
         };
 
         forwardcomb {
             bindings = <&mkp MB5>;
-            key-positions = <40 28 34>;
+            key-positions = <28 34>;
         };
 
         leptclick {
@@ -361,12 +370,12 @@
 
         curlyleft {
             bindings = <&kp LS(LEFT_BRACKET)>;
-            key-positions = <37 11 12 31>;
+            key-positions = <11 12 31>;
         };
 
         curlyright {
             bindings = <&kp LS(RIGHT_BRACKET)>;
-            key-positions = <40 17 18 34>;
+            key-positions = <17 18 34>;
         };
 
         clearformat {
@@ -396,7 +405,7 @@
 
         ctrlspace {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <36 37 30 31>;
+            key-positions = <30 31>;
         };
 
         tonumber {
