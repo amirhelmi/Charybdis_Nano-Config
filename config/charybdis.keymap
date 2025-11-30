@@ -64,17 +64,6 @@
             tapping-term-ms = <200>;
         };
 
-        shift_repeat: shift_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_REPEAT";
-            bindings = <&kp>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <180>;
-            flavor = "tap-unless-interrupted";
-        };
-
         rightclick_appmenu: rightclick_appmenu {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHTCLICK_APPMENU";
@@ -84,26 +73,6 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             require-prior-idle-ms = <180>;
-        };
-
-        num_num: num_num {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NUM_NUM";
-            bindings = <&mo>, <&to>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <180>;
-        };
-
-        caps_ctrl_shift: caps_ctrl_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAPS_CTRL_SHIFT";
-            bindings = <&kp>, <&caps_word>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
         };
     };
 
@@ -194,7 +163,7 @@
 
         plus {
             bindings = <&mt ASTRK PLUS>;
-            key-positions = <15 25>;
+            key-positions = <16 26>;
         };
 
         insert {
@@ -360,7 +329,7 @@
 
         ctrlbacspac {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <16 26>;
+            key-positions = <16 17 18>;
         };
 
         curlyleft {
@@ -409,8 +378,13 @@
         };
 
         alttabs {
-            bindings = <&kp LA(LEFT_WIN)>;
+            bindings = <&kp LA(TAB)>;
             key-positions = <22 21>;
+        };
+
+        capswordss {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
         };
     };
 
