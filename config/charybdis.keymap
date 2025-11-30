@@ -325,7 +325,7 @@
 
         switchwinright {
             bindings = <&switchwin>;
-            key-positions = <16 17 18>;
+            key-positions = <16 17>;
         };
 
         stickyfunlayer {
