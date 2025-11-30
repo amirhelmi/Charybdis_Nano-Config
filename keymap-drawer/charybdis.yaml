@@ -321,7 +321,7 @@ combos:
   k: ENTER
 - p: [16, 17, 34]
   k: {t: nav, h: toggle}
-- p: [16, 26]
+- p: [15, 25]
   k: {t: +, h: '*'}
 - p: [1, 11]
   k: INSERT
@@ -389,8 +389,6 @@ combos:
   k: {t: default, h: toggle}
 - p: [16, 26]
   k: Ctl+BACKSPACE
-- p: [27, 27, 28]
-  k: '&mkp LCLK'
 - p: [11, 12, 31]
   k: Sft+[
 - p: [17, 18, 34]
@@ -401,9 +399,9 @@ combos:
   k: Ctl+TAB
 - p: [13, 14]
   k: Ctl+Sft+TAB
-- p: [6, 5]
+- p: [7, 16, 18]
   k: UP ARROW
-- p: [25, 26]
+- p: [16, 27, 18]
   k: DOWN
 - p: [30, 31]
   k: Ctl+SPACE
