@@ -289,17 +289,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [40, 18, 34]
+- p: [18, 34]
   k: {t: ), h: ']'}
 - p: [6, 16]
   k: '!'
-- p: [37, 11, 31]
+- p: [11, 31]
   k: {t: (, h: '['}
 - p: [12, 23]
   k: Ctl+C
 - p: [12, 3]
   k: {t: Ctl+V, h: LCTRL}
-- p: [40, 19, 34]
+- p: [19, 34]
   k: ;
 - p: [2, 3, 7, 8, 1, 6, 9, 0]
   k: BT CLR ALL
@@ -309,13 +309,13 @@ combos:
   k: _
 - p: [11, 12, 13]
   k: {t: LEFT ALT, h: sticky}
-- p: [40, 16, 34]
+- p: [16, 34]
   k: ':'
-- p: [40, 34, 26]
+- p: [34, 26]
   k: '='
 - p: [8, 18]
   k: '&value'
-- p: [40, 8, 34]
+- p: [8, 34]
   k: '&statement'
 - p: [26, 27]
   k: ENTER
@@ -373,15 +373,15 @@ combos:
   k: {t: '&mkp RCLK', h: CONTEXT MENU}
 - p: [14, 24]
   k: DELETE
-- p: [40, 16, 17, 18]
+- p: [16, 17, 18]
   k: '&switchwin'
-- p: [40, 37, 2, 7]
+- p: [2, 7]
   k: {t: fn, h: sticky}
 - p: [2, 3, 1]
   k: Ctl+F4
-- p: [40, 34, 27]
+- p: [34, 27]
   k: '&mkp MB4'
-- p: [40, 28, 34]
+- p: [28, 34]
   k: '&mkp MB5'
 - p: [11, 12]
   k: '&mkp LCLK'
@@ -391,9 +391,9 @@ combos:
   k: Ctl+BACKSPACE
 - p: [27, 27, 28]
   k: '&mkp LCLK'
-- p: [37, 11, 12, 31]
+- p: [11, 12, 31]
   k: Sft+[
-- p: [40, 17, 18, 34]
+- p: [17, 18, 34]
   k: Sft+]
 - p: [11, 23]
   k: '&formatctrlspace'
@@ -405,7 +405,7 @@ combos:
   k: UP ARROW
 - p: [25, 26]
   k: DOWN
-- p: [36, 37, 30, 31]
+- p: [30, 31]
   k: Ctl+SPACE
 - p: [12, 17]
   k: {t: num, h: toggle}
