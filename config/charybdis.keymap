@@ -407,6 +407,11 @@
             bindings = <&to 1>;
             key-positions = <12 17>;
         };
+
+        alttabs {
+            bindings = <&kp LA(LEFT_WIN)>;
+            key-positions = <22 21>;
+        };
     };
 
     macros {
