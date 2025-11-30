@@ -194,7 +194,7 @@
 
         plus {
             bindings = <&mt ASTRK PLUS>;
-            key-positions = <16 26>;
+            key-positions = <15 25>;
         };
 
         insert {
@@ -363,11 +363,6 @@
             key-positions = <16 26>;
         };
 
-        righthandleftclick {
-            bindings = <&mkp LCLK>;
-            key-positions = <27 27 28>;
-        };
-
         curlyleft {
             bindings = <&kp LS(LEFT_BRACKET)>;
             key-positions = <11 12 31>;
@@ -395,12 +390,12 @@
 
         ups {
             bindings = <&kp UP_ARROW>;
-            key-positions = <6 5>;
+            key-positions = <7 16 18>;
         };
 
         downs {
             bindings = <&kp DOWN>;
-            key-positions = <25 26>;
+            key-positions = <16 27 18>;
         };
 
         ctrlspace {
