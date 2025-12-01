@@ -294,7 +294,8 @@
 
         switchwinright {
             bindings = <&switchwin>;
-            key-positions = <16 17 18>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <190>;
         };
 
         stickyfunlayer {
@@ -380,6 +381,11 @@
         capswordss {
             bindings = <&caps_word>;
             key-positions = <13 16>;
+        };
+
+        controlbacspacse {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <16 18 17>;
         };
     };
 
