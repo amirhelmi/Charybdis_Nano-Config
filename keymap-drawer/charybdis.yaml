@@ -81,7 +81,7 @@ layers:
   - ''
   - ''
   - UP ARROW
-  - END
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -250,8 +250,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB4'
-  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   bootloader:
   - '&bootloader'
   - {t: ▽, type: trans}
@@ -303,9 +303,9 @@ combos:
   k: ;
 - p: [2, 3, 7, 8, 1, 6, 9, 0]
   k: BT CLR ALL
-- p: [26, 29]
-  k: '-'
 - p: [26, 28]
+  k: '-'
+- p: [26, 29]
   k: _
 - p: [11, 12, 13]
   k: {t: LEFT ALT, h: sticky}
