@@ -116,14 +116,14 @@
             key-positions = <2 3 7 8 1 6 9 0>;
         };
 
-        underscore {
+        minus {
             bindings = <&kp MINUS>;
-            key-positions = <26 29>;
+            key-positions = <26 28>;
         };
 
-        minus {
+        underscore {
             bindings = <&kp UNDER>;
-            key-positions = <26 28>;
+            key-positions = <26 29>;
         };
 
         stickyalt {
@@ -538,7 +538,7 @@
 
         nav_layer {
             bindings = <
-  &none   &none   &trans  &trans  &none     &none     &none            &kp UP_ARROW   &kp END            &none
+  &none   &none   &trans  &trans  &none     &none     &none            &kp UP_ARROW   &none              &none
   &trans  &trans  &trans  &trans  &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
   &none   &none   &none   &none   &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none
                   &trans  &trans  &trans    &trans    &trans
@@ -574,10 +574,10 @@
 
         scroll_layer {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &mo 7   &trans
-  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans
-                  &trans  &trans  &trans    &mkp MB4  &mkp MB5
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &mo 7   &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans
             >;
         };
 
