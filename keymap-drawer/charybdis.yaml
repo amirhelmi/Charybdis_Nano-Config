@@ -373,7 +373,7 @@ combos:
   k: {t: '&mkp RCLK', h: CONTEXT MENU}
 - p: [14, 24]
   k: DELETE
-- p: [16, 17, 18]
+- p: [16, 17]
   k: '&switchwin'
 - p: [2, 7]
   k: {t: fn, h: sticky}
@@ -409,3 +409,5 @@ combos:
   k: Alt+TAB
 - p: [13, 16]
   k: '&caps_word'
+- p: [16, 18, 17]
+  k: Ctl+BACKSPACE
