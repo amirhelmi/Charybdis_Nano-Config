@@ -294,7 +294,7 @@
 
         switchwinright {
             bindings = <&switchwin>;
-            key-positions = <16 17>;
+            key-positions = <16 17 18>;
         };
 
         stickyfunlayer {
@@ -325,11 +325,6 @@
         tobase {
             bindings = <&to 0>;
             key-positions = <17 18>;
-        };
-
-        ctrlbacspac {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <16 17 18>;
         };
 
         curlyleft {
