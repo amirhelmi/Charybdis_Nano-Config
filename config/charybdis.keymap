@@ -285,6 +285,8 @@
         rightclickr {
             bindings = <&rightclick_appmenu K_CONTEXT_MENU RCLK>;
             key-positions = <12 13>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <200>;
         };
 
         delete {
@@ -295,7 +297,8 @@
         switchwinright {
             bindings = <&switchwin>;
             key-positions = <16 17>;
-            require-prior-idle-ms = <190>;
+            require-prior-idle-ms = <220>;
+            timeout-ms = <45>;
         };
 
         stickyfunlayer {
@@ -321,11 +324,14 @@
         leptclick {
             bindings = <&mkp LCLK>;
             key-positions = <11 12>;
+            require-prior-idle-ms = <200>;
         };
 
         tobase {
             bindings = <&to 0>;
             key-positions = <17 18>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <200>;
         };
 
         curlyleft {
