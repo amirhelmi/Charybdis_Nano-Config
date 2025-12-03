@@ -33,7 +33,7 @@
 
     scroll {
       layers = <NAV>;
-      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 10 1>, <&zip_xy_to_scroll_mapper>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_y_scaler 8 1>, <&zip_x_scaler 4 1>, <&zip_xy_to_scroll_mapper>;
     };
   };
 };
