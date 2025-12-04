@@ -377,6 +377,8 @@
         tonumber {
             bindings = <&to 1>;
             key-positions = <12 17>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
         };
 
         alttabs {
@@ -387,6 +389,8 @@
         capswordss {
             bindings = <&caps_word>;
             key-positions = <13 16>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
         };
 
         controlbacspacse {
