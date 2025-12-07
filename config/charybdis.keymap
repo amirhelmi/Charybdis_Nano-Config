@@ -83,7 +83,7 @@
             #binding-cells = <2>;
             require-prior-idle-ms = <200>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -465,6 +465,7 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp NUMBER_1>;
             label = "ALTONE";
+            wait-ms = <50>;
         };
 
         altzero: altzero {
@@ -472,6 +473,7 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp NUMBER_0>;
             label = "ALTZERO";
+            wait-ms = <50>;
         };
 
         althome: althome {
