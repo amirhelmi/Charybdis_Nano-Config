@@ -260,12 +260,12 @@
 
         doublequote {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <28 29>;
+            key-positions = <28 27>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <19 29>;
+            key-positions = <29 28>;
         };
 
         selectall {
@@ -380,21 +380,11 @@
             key-positions = <16 27 18>;
         };
 
-        ctrlspace {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <30 31>;
-        };
-
         tonumber {
             bindings = <&to 1>;
             key-positions = <12 17>;
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-        };
-
-        alttabs {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <22 21>;
         };
 
         capswordss {
@@ -490,20 +480,6 @@
             label = "ALTLEFT";
         };
 
-        tobase_space: tobase_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &kp SPACE>;
-            label = "TOBASE_SPACE";
-        };
-
-        tobase_tab: tobase_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &kp TAB>;
-            label = "TOBASE_TAB";
-        };
-
         formatctrlspace: formatctrlspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -516,6 +492,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(F) &kp LS(D) &kp O &kp J &kp J &kp N5 &kp LS(N) &kp X &kp F &kp G &kp LS(H) &kp N5 &kp N1 &kp J &kp LS(L) &kp LS(B) &kp N5 &kp T &kp LS(A) &kp LS(R) &kp LS(I) &kp C &kp Y &kp N1 &kp N &kp G &kp LS(D) &kp T &kp T &kp LS(Y) &kp X &kp LS(U) &kp X &kp LS(B) &kp LS(A) &kp LS(A) &kp LS(L) &kp S &kp N6 &kp LS(N) &kp LS(I) &kp U &kp R &kp LS(D) &kp LS(F) &kp LS(O) &kp T &kp LS(Q) &kp LS(T) &kp N &kp N7 &kp O &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(L) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N1 &kp N6 &kp LS(O) &kp LS(Q)>;
             label = "NEW_MACRO";
+            wait-ms = <50>;
         };
 
         alt_wait_tab: alt_wait_tab {
@@ -532,10 +509,10 @@
 
         default_layer {
             bindings = <
-  &mt LC(Q) Q  &kp L  &kp Y            &kp P               &kp B            &kp Z               &kp F                    &kp O        &kp U       &kp SLASH
-  &kp C        &kp R  &lt 2 S          &mt LSHIFT T        &kp G            &kp M               &kp N                    &kp E        &kp I       &kp A
-  &kp W        &kp J  &lt 5 V          &kp D               &kp K            &kp X               &lt 6 H                  &lt 6 COMMA  &kp PERIOD  &kp APOS
-                      &mt LCTRL SPACE  &mt LEFT_SHIFT TAB  &alt_wait_tab    &kp LC(LEFT_SHIFT)  &keyrepeat_layernum 1 0
+  &kp Q  &kp L  &kp Y            &kp P               &kp B            &kp Z               &kp F                    &kp O        &kp U       &kp SLASH
+  &kp C  &kp R  &lt 2 S          &kp T               &kp G            &kp M               &kp N                    &kp E        &kp I       &kp A
+  &kp W  &kp J  &lt 5 V          &kp D               &kp K            &kp X               &lt 6 H                  &lt 6 COMMA  &kp PERIOD  &kp APOS
+                &mt LCTRL SPACE  &mt LEFT_SHIFT TAB  &alt_wait_tab    &kp LC(LEFT_SHIFT)  &keyrepeat_layernum 1 0
             >;
         };
 
@@ -544,16 +521,16 @@
   &trans  &trans  &trans          &trans        &trans    &trans  &trans        &trans  &trans        &trans
   &kp N9  &kp N5  &lt 2 NUMBER_1  &kp NUMBER_3  &trans    &trans  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &kp N8
   &trans  &trans  &trans          &kp N7        &trans    &trans  &kp NUMBER_6  &trans  &trans        &trans
-                  &tobase_space   &tobase_tab   &trans    &trans  &trans
+                  &trans          &trans        &trans    &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
   &none   &none   &trans     &trans          &none     &none     &none            &kp UP_ARROW   &none              &none
-  &trans  &trans  &trans     &kp LEFT_SHIFT  &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
+  &trans  &trans  &trans     &trans          &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
   &none   &none   &none      &none           &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none
-                  &kp LCTRL  &trans          &trans    &trans    &trans
+                  &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans    &trans
             >;
         };
 
@@ -568,10 +545,10 @@
 
         fn_layer {
             bindings = <
-  &trans  &trans  &kp F11  &trans  &trans    &trans  &kp F12  &trans   &trans  &trans
-  &kp F9  &kp F5  &kp F1   &kp F3  &trans    &trans  &kp F2   &kp F10  &kp F4  &kp F8
-  &trans  &trans  &trans   &kp F7  &trans    &trans  &kp F6   &trans   &trans  &trans
-                  &trans   &trans  &trans    &trans  &trans
+  &trans  &trans  &trans  &kp F11  &trans    &trans  &kp F12  &trans   &trans  &trans
+  &kp F9  &kp F5  &kp F1  &kp F3   &trans    &trans  &kp F2   &kp F10  &kp F4  &kp F8
+  &trans  &trans  &trans  &kp F7   &trans    &trans  &kp F6   &trans   &trans  &trans
+                  &trans  &trans   &trans    &trans  &trans
             >;
         };
 
