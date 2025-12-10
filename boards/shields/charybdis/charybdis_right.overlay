@@ -28,6 +28,7 @@
 
 // In your charybdis_right.overlay or related .dtsi file
 &spi0 {
+	status = "okay";
     trackball@0 {
         compatible = "pixart,pmw3610";
         // ... existing properties (cs-gpios, motion-gpios, etc.) ...
@@ -45,12 +46,9 @@
 };
 
 
-/ {
-  trackball_listener {
-    status = "okay";
-    device = <&trackball>;
-  };
+
 
 };
+
 
 
