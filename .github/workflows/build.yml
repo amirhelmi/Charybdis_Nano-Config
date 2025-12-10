@@ -1,13 +1,13 @@
 name: Build ZMK Firmware
 on:
-  push:
-    paths-ignore: # don't rebuild if only documentation has changed
-      - 'keymap-drawer/**'
-      - '.github/**'
-      - '**.md'
-  pull_request:
-  workflow_dispatch: # allow manually triggering builds
+  push:
+    paths-ignore: # don't rebuild if only documentation has changed
+      - 'keymap-drawer/**'
+      - '.github/**'
+      - '**.md'
+  pull_request:
+  workflow_dispatch: # allow manually triggering builds
 
 jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
