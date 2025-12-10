@@ -35,18 +35,16 @@
         compatible = "pixart,pmw3610";
         // ... existing properties (cs-gpios, motion-gpios, etc.) ...
 		// ADD THIS REQUIRED PROPERTY:
+		reg = <0>;
 		cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
     	// P0.28 is the GPIO pin for the Motion interrupt (typically D8 on Nice!Nano).
     	motion-gpios = <&gpio0 28 GPIO_PULL_UP>;
         // ADD THESE NEW REQUIRED PROPERTIES:
         zephyr,axis-x = <INPUT_ABS_X>;
         zephyr,axis-y = <INPUT_ABS_Y>;
-
-        // Note: If your trackball is rotated, you might need to swap 
-        // these or invert them later, but this standard mapping 
-        // should satisfy the compiler requirement.
     };
 };
+
 
 
 
