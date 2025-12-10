@@ -26,8 +26,17 @@
 		;
 };
 
-&spi0 {
+&spi0 { // or &spi1
     status = "okay";
+
+    trackball: trackball@0 { // <-- THIS IS THE DEVICE NODE
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        // ... existing properties (spi-max-frequency, cs-gpios, etc.) ...
+
+        // 🟢 ADD THE REQUIRED PROPERTY HERE:
+        motion-gpios = <&gpio0 28 GPIO_PULL_UP>;
+    };
 };
 
 // https://github.com/badjeff/zmk-pmw3610-driver
@@ -36,4 +45,5 @@
     status = "okay";
     device = <&trackball>;
   };
+
 };
