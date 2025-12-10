@@ -26,16 +26,19 @@
 		;
 };
 
-&spi0 { // or &spi1
-    status = "okay";
-
-    trackball: trackball@0 { // <-- THIS IS THE DEVICE NODE
+// In your charybdis_right.overlay or related .dtsi file
+&spi0 {
+    trackball@0 {
         compatible = "pixart,pmw3610";
-        reg = <0>;
-        // ... existing properties (spi-max-frequency, cs-gpios, etc.) ...
+        // ... existing properties (cs-gpios, motion-gpios, etc.) ...
 
-        // 🟢 ADD THE REQUIRED PROPERTY HERE:
-        motion-gpios = <&gpio0 28 GPIO_PULL_UP>;
+        // ADD THESE NEW REQUIRED PROPERTIES:
+        zephyr,axis-x = <INPUT_ABS_X>;
+        zephyr,axis-y = <INPUT_ABS_Y>;
+
+        // Note: If your trackball is rotated, you might need to swap 
+        // these or invert them later, but this standard mapping 
+        // should satisfy the compiler requirement.
     };
 };
 
@@ -47,3 +50,4 @@
   };
 
 };
+
