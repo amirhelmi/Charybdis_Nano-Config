@@ -29,6 +29,7 @@
 // In your charybdis_right.overlay or related .dtsi file
 &spi0 {
 	status = "okay";
+	pinctrl-0 = <&spi0_default>;
     trackball@0 {
         compatible = "pixart,pmw3610";
         // ... existing properties (cs-gpios, motion-gpios, etc.) ...
@@ -45,6 +46,7 @@
         // should satisfy the compiler requirement.
     };
 };
+
 
 
 
