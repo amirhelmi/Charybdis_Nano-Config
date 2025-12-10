@@ -1,13 +1,15 @@
+# .github/workflows/main.yml
 name: Build ZMK Firmware
 on:
   push:
-    paths-ignore: # don't rebuild if only documentation has changed
-      - 'keymap-drawer/**'
-      - '.github/**'
-      - '**.md'
-  pull_request:
-  workflow_dispatch: # allow manually triggering builds
+  # ... other triggers ...
 
 jobs:
   build:
+    # Add a placeholder input with a temporary version number.
+    # This will force the cache used by the reusable workflow to be invalidated.
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      # Change this value (e.g., from v1 to v2) every time you want to force a cache clear.
+      # You can remove this 'with' section after the build succeeds.
+      zmk-version-override: v1.1
