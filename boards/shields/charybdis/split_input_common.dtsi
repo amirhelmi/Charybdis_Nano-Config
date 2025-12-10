@@ -1,14 +1,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 
-#define DEF 0
-#define NUM 1
-#define NAV 2
-#define SWT 3
-#define FN 4
-#define SCR 5
-#define SNI 6
-#define BOOT 7
 
 / {
   split_inputs {
