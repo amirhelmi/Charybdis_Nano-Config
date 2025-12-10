@@ -12,4 +12,4 @@ jobs:
     with:
       # Change this value (e.g., from v1 to v2) every time you want to force a cache clear.
       # You can remove this 'with' section after the build succeeds.
-      zmk-version-override: v1.1
+      zmk-version-override: v1.1.fresh_toolchain
