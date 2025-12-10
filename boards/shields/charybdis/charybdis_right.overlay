@@ -31,7 +31,9 @@
     trackball@0 {
         compatible = "pixart,pmw3610";
         // ... existing properties (cs-gpios, motion-gpios, etc.) ...
-
+		// ADD THIS REQUIRED PROPERTY:
+    	// P0.28 is the GPIO pin for the Motion interrupt (typically D8 on Nice!Nano).
+    	motion-gpios = <&gpio0 28 GPIO_PULL_UP>;
         // ADD THESE NEW REQUIRED PROPERTIES:
         zephyr,axis-x = <INPUT_ABS_X>;
         zephyr,axis-y = <INPUT_ABS_Y>;
@@ -42,7 +44,7 @@
     };
 };
 
-// https://github.com/badjeff/zmk-pmw3610-driver
+
 / {
   trackball_listener {
     status = "okay";
@@ -50,4 +52,5 @@
   };
 
 };
+
 
