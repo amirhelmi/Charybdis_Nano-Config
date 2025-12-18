@@ -2,6 +2,9 @@
 #include "charybdis_3610.dtsi"
 #include "split_input_common.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
+#define INPUT_EV_REL 0x02
+#define INPUT_REL_X 0x00
+#define INPUT_REL_Y 0x01
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -58,9 +61,9 @@
         cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>; // D0
         irq-gpios = <&gpio0 28 GPIO_PULL_UP>;   // D8
         evt-type = <INPUT_EV_REL>; 
-        
-        zephyr,axis-x = <INPUT_REL_X>;
-        zephyr,axis-y = <INPUT_REL_Y>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
+
 
