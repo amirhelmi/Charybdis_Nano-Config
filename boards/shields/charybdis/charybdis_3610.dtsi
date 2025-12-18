@@ -1,23 +1,40 @@
-/* Input event codes required by the pmw3610-alt driver */
+#include <dt-bindings/zmk/input_transform.h>
+
+/* Required input event codes for the pmw3610-alt driver */
 #define INPUT_EV_REL 0x02
 #define INPUT_REL_X 0x00
 #define INPUT_REL_Y 0x01
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,  // D1 / P0.20
-                    <NRF_PSEL(SPIM_MOSI, 0, 17)>, // D6 / P0.17
-                    <NRF_PSEL(SPIM_MISO, 1, 1)>;  // D10 / P1.01
-        };
+/ {
+    /* This node defines how the trackball data is transformed */
+    trackball_pinctrl: trackball_pinctrl {
+        compatible = "zmk,input-processor-transform";
+        #input-processor-cells = <1>;
+        type = <INPUT_EV_REL>;
     };
+};
 
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                    <NRF_PSEL(SPIM_MISO, 1, 1)>;
-            low-power-enable;
-        };
+&spi0 {
+    status = "okay";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    /* cs-gpios is defined here so the SPI bus handles the chip select */
+    /* The specific pin is usually overridden in the .overlay file */
+    cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
+
+    trackball: trackball@0 {
+        compatible = "pixart,pmw3610-alt";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        
+        /* The interrupt pin is usually overridden in the .overlay */
+        irq-gpios = <&gpio0 28 GPIO_PULL_UP>;
+
+        /* Driver specific axis mapping */
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
