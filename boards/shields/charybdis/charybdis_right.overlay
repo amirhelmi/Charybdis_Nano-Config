@@ -1,47 +1,43 @@
 #include "charybdis.dtsi"
 #include "charybdis_3610.dtsi"
 #include "split_input_common.dtsi"
+#include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
-	col-offset = <5>;
+    col-offset = <5>;
 };
 
 &kscan0 {
-	compatible = "zmk,kscan-gpio-matrix";
-	
-	col-gpios
-		= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		;
+    compatible = "zmk,kscan-gpio-matrix";
+    col-gpios
+        = <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+        ;
 
-	row-gpios
-		= <&pro_micro 18 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 5 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 4 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
-		;
+    row-gpios
+        = <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        ;
 };
 
-
-// In your charybdis_right.overlay or related .dtsi file
 &spi0 {
-	status = "okay";
-	pinctrl-0 = <&spi0_default>;
-	pinctrl-names = "default";
+    status = "okay";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-names = "default";
+
     trackball@0 {
         compatible = "pixart,pmw3610-alt";
-        // ... existing properties (cs-gpios, motion-gpios, etc.) ...
-		// ADD THIS REQUIRED PROPERTY:
-		reg = <0>;
-		cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
-    	// P0.28 is the GPIO pin for the Motion interrupt (typically D8 on Nice!Nano).
-    	motion-gpios = <&gpio0 28 GPIO_PULL_UP>;
-        // ADD THESE NEW REQUIRED PROPERTIES:
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+        motion-gpios = <&gpio0 28 GPIO_PULL_UP>;
         zephyr,axis-x = <INPUT_ABS_X>;
         zephyr,axis-y = <INPUT_ABS_Y>;
-    			};
-	};
+    };
+};
