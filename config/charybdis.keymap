@@ -487,20 +487,19 @@
             label = "FORMATCTRLSPACE";
         };
 
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(F) &kp LS(D) &kp O &kp J &kp J &kp N5 &kp LS(N) &kp X &kp F &kp G &kp LS(H) &kp N5 &kp N1 &kp J &kp LS(L) &kp LS(B) &kp N5 &kp T &kp LS(A) &kp LS(R) &kp LS(I) &kp C &kp Y &kp N1 &kp N &kp G &kp LS(D) &kp T &kp T &kp LS(Y) &kp X &kp LS(U) &kp X &kp LS(B) &kp LS(A) &kp LS(A) &kp LS(L) &kp S &kp N6 &kp LS(N) &kp LS(I) &kp U &kp R &kp LS(D) &kp LS(F) &kp LS(O) &kp T &kp LS(Q) &kp LS(T) &kp N &kp N7 &kp O &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(L) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N1 &kp N6 &kp LS(O) &kp LS(Q)>;
-            label = "NEW_MACRO";
-            wait-ms = <50>;
-        };
-
         alt_wait_tab: alt_wait_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp TAB>;
             label = "ALT_WAIT_TAB";
             wait-ms = <50>;
+        };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(L) &kp T &kp LS(A) &kp K &kp Z &kp N3 &kp E &kp P &kp LS(Y) &kp B &kp LS(C) &kp D &kp H &kp N6 &kp LS(B) &kp LS(C) &kp H &kp N9 &kp P &kp I &kp F &kp N8 &kp N5 &kp LS(M) &kp N4 &kp C &kp U &kp X &kp LS(N) &kp LS(I) &kp N0 &kp V &kp N4 &kp LS(Z) &kp N7 &kp S &kp LS(X) &kp N2 &kp LS(R) &kp LS(G) &kp N9 &kp LS(A) &kp LS(N) &kp N6 &kp G &kp N6 &kp LS(M) &kp LS(L) &kp Q &kp LS(A) &kp N &kp LS(Y) &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(L) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp H &kp LS(I) &kp LS(Q) &kp J>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -509,10 +508,10 @@
 
         default_layer {
             bindings = <
-  &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z  &kp F                    &kp O        &kp U       &kp SLASH
-  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M  &kp N                    &kp E        &kp I       &kp A
-  &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X  &lt 6 H                  &lt 6 COMMA  &kp PERIOD  &kp APOS
-                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &none  &keyrepeat_layernum 1 0
+  &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z        &kp F                    &kp O        &kp U       &kp SLASH
+  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                    &kp E        &kp I       &kp A
+  &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X        &lt 6 H                  &lt 6 COMMA  &kp PERIOD  &kp APOS
+                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &keyrepeat_layernum 1 0
             >;
         };
 
