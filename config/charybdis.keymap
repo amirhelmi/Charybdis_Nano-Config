@@ -335,7 +335,6 @@
         leptclick {
             bindings = <&mkp LCLK>;
             key-positions = <11 12>;
-            require-prior-idle-ms = <180>;
         };
 
         tobase {
