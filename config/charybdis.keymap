@@ -308,8 +308,9 @@
         switchwinright {
             bindings = <&switchwin>;
             key-positions = <16 17>;
-            require-prior-idle-ms = <220>;
+            require-prior-idle-ms = <500>;
             timeout-ms = <45>;
+            slow-release;
         };
 
         stickyfunlayer {
@@ -344,7 +345,7 @@
             bindings = <&to 0>;
             key-positions = <17 18>;
             timeout-ms = <45>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <500>;
         };
 
         curlyleft {
@@ -365,11 +366,13 @@
         controltab {
             bindings = <&kp LC(TAB)>;
             key-positions = <15 16>;
+            require-prior-idle-ms = <500>;
         };
 
         controlshifttab {
             bindings = <&kp LC(LS(TAB))>;
             key-positions = <13 14>;
+            require-prior-idle-ms = <500>;
         };
 
         ups {
