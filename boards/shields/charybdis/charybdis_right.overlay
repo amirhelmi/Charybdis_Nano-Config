@@ -1,4 +1,6 @@
 #include "charybdis.dtsi"
+#include "charybdis_3610.dtsi"
+#include "split_input_common.dtsi"
 
 &default_transform {
 	col-offset = <5>;
@@ -34,5 +36,4 @@
     status = "okay";
     device = <&trackball>;
   };
-
 };
