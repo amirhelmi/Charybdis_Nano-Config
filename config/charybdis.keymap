@@ -335,6 +335,7 @@
         leptclick {
             bindings = <&mkp LCLK>;
             key-positions = <11 12>;
+            slow-release;
         };
 
         tobase {
