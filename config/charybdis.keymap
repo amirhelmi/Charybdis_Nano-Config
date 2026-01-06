@@ -337,7 +337,7 @@
             bindings = <&mkp LCLK>;
             key-positions = <11 12>;
             slow-release;
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
 
