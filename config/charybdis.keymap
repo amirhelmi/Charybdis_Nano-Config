@@ -358,9 +358,9 @@
             key-positions = <11 23>;
         };
 
-        controltab {
+        controltabright {
             bindings = <&kp LC(TAB)>;
-            key-positions = <16 17 34>;
+            key-positions = <4 14>;
             require-prior-idle-ms = <500>;
         };
 
@@ -377,6 +377,12 @@
         pipes {
             bindings = <&kp PIPE>;
             key-positions = <9 19>;
+        };
+
+        controltableft {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <3 13>;
+            require-prior-idle-ms = <500>;
         };
     };
 
