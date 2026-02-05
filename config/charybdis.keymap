@@ -289,7 +289,7 @@
         };
 
         rightclickr {
-            bindings = <&rightclick_appmenu K_CONTEXT_MENU RCLK>;
+            bindings = <&mkp RCLK>;
             key-positions = <12 13>;
             timeout-ms = <45>;
             require-prior-idle-ms = <200>;
