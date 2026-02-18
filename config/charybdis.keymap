@@ -213,16 +213,6 @@
             key-positions = <21 22 23>;
         };
 
-        bluetoothone {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <20 21 22 23>;
-        };
-
-        bluetoothtwo {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <26 27 28 28 29>;
-        };
-
         types {
             bindings = <&altzero>;
             key-positions = <2 12>;
@@ -510,9 +500,9 @@
 
         num_layer {
             bindings = <
-  &trans  &trans        &trans    &trans        &trans    &trans  &trans        &trans        &trans  &trans
-  &kp N8  &kp NUMBER_4  &lt 2 N0  &kp NUMBER_2  &trans    &trans  &kp NUMBER_3  &kp NUMBER_1  &kp N5  &kp N9
-  &trans  &trans        &trans    &kp NUMBER_6  &trans    &trans  &kp N7        &trans        &trans  &trans
+  &trans  &trans        &trans    &trans        &trans    &trans  &trans        &trans        &trans        &trans
+  &kp N8  &kp NUMBER_4  &lt 2 N0  &kp NUMBER_2  &trans    &trans  &kp NUMBER_3  &kp NUMBER_1  &kp N5        &kp N9
+  &trans  &trans        &trans    &kp NUMBER_6  &trans    &trans  &kp N7        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
                         &trans    &trans        &trans    &trans  &trans
             >;
         };
