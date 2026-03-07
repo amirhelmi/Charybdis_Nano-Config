@@ -170,6 +170,8 @@
         scrolh {
             bindings = <&tog 2>;
             key-positions = <16 26>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <1000>;
         };
 
         plus {
@@ -236,6 +238,7 @@
         bspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <17 27>;
+            timeout-ms = <25>;
         };
 
         altlefthome {
@@ -293,8 +296,8 @@
         switchwinright {
             bindings = <&switchwin>;
             key-positions = <16 17>;
-            require-prior-idle-ms = <500>;
-            timeout-ms = <45>;
+            require-prior-idle-ms = <1000>;
+            timeout-ms = <25>;
             slow-release;
         };
 
@@ -322,14 +325,14 @@
             bindings = <&mkp LCLK>;
             key-positions = <11 12>;
             slow-release;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
         };
 
         tobase_esc {
             bindings = <&to_base_escape>;
             key-positions = <17 18>;
-            timeout-ms = <45>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <500>;
         };
 
