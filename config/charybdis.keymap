@@ -24,18 +24,18 @@
 &sk { quick-release; };
 
 &lt {
-    require-prior-idle-ms = <150>;
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
+    require-prior-idle-ms = <125>;
+    tapping-term-ms = <230>;
+    quick-tap-ms = <150>;
     hold-trigger-on-release;
     flavor = "balanced";
 };
 
 &mt {
     flavor = "balanced";
-    require-prior-idle-ms = <175>;
-    tapping-term-ms = <280>;
-    quick-tap-ms = <180>;
+    require-prior-idle-ms = <150>;
+    tapping-term-ms = <230>;
+    quick-tap-ms = <150>;
     hold-trigger-on-release;
 };
 
@@ -81,9 +81,9 @@
             bindings = <&mo>, <&key_repeat>;
 
             #binding-cells = <2>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -93,33 +93,39 @@
         rparenth {
             bindings = <&mt RIGHT_BRACKET RIGHT_PARENTHESIS>;
             key-positions = <18 34>;
+            timeout-ms = <30>;
         };
 
         exclai {
             bindings = <&kp EXCL>;
             key-positions = <6 16>;
+            timeout-ms = <30>;
         };
 
         lparenth {
             bindings = <&mt LEFT_BRACKET LEFT_PARENTHESIS>;
             key-positions = <11 31>;
+            timeout-ms = <30>;
         };
 
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <12 23>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <180>;
         };
 
         paste {
             bindings = <&mt LCTRL LC(V)>;
             key-positions = <12 3>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <180>;
         };
 
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <19 34>;
+            timeout-ms = <30>;
         };
 
         resetble {
@@ -130,11 +136,13 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <26 28>;
+            timeout-ms = <30>;
         };
 
         underscore {
             bindings = <&kp UNDER>;
             key-positions = <26 29>;
+            timeout-ms = <30>;
         };
 
         stickyalt {
@@ -145,69 +153,81 @@
         colonn {
             bindings = <&kp COLON>;
             key-positions = <16 34>;
+            timeout-ms = <30>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <34 26>;
+            timeout-ms = <30>;
         };
 
         value {
             bindings = <&value>;
             key-positions = <8 18>;
+            timeout-ms = <30>;
         };
 
         statementcombo {
             bindings = <&statement>;
             key-positions = <8 34>;
+            timeout-ms = <30>;
         };
 
         enterr {
             bindings = <&kp ENTER>;
             key-positions = <26 27>;
+            timeout-ms = <30>;
         };
 
         scrolh {
             bindings = <&tog 2>;
             key-positions = <16 26>;
             timeout-ms = <25>;
-            require-prior-idle-ms = <1000>;
+            require-prior-idle-ms = <500>;
         };
 
         plus {
             bindings = <&mt ASTRK PLUS>;
             key-positions = <15 25>;
+            timeout-ms = <30>;
         };
 
         insert {
             bindings = <&kp INSERT>;
             key-positions = <1 11>;
+            timeout-ms = <30>;
         };
 
         redo {
             bindings = <&kp LC(Y)>;
             key-positions = <2 1>;
+            timeout-ms = <30>;
         };
 
         undo {
             bindings = <&kp LC(Z)>;
             key-positions = <3 2>;
+            timeout-ms = <30>;
         };
 
         calc_rel {
             bindings = <&mt LC(R) LC(D)>;
             key-positions = <2 11>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <180>;
         };
 
         focus {
             bindings = <&kp LC(E)>;
             key-positions = <2 13>;
+            timeout-ms = <30>;
         };
 
         at {
             bindings = <&mt HASH AT>;
             key-positions = <27 18>;
+            timeout-ms = <30>;
         };
 
         window {
@@ -218,6 +238,7 @@
         types {
             bindings = <&altzero>;
             key-positions = <2 12>;
+            timeout-ms = <30>;
         };
 
         printscreen {
@@ -228,11 +249,13 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <5 15>;
+            timeout-ms = <30>;
         };
 
         question {
             bindings = <&kp QUESTION>;
             key-positions = <17 28>;
+            timeout-ms = <30>;
         };
 
         bspace {
@@ -244,16 +267,19 @@
         altlefthome {
             bindings = <&back_home 0 0>;
             key-positions = <13 23>;
+            timeout-ms = <30>;
         };
 
         doublequote {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <28 27>;
+            timeout-ms = <30>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <8 9>;
+            timeout-ms = <30>;
         };
 
         selectall {
@@ -279,6 +305,7 @@
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <13 10>;
+            timeout-ms = <30>;
         };
 
         rightclickr {
@@ -291,12 +318,13 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <14 24>;
+            timeout-ms = <30>;
         };
 
         switchwinright {
             bindings = <&switchwin>;
             key-positions = <16 17>;
-            require-prior-idle-ms = <1000>;
+            require-prior-idle-ms = <500>;
             timeout-ms = <25>;
             slow-release;
         };
@@ -304,6 +332,7 @@
         stickyfunlayer {
             bindings = <&sl 4>;
             key-positions = <2 7>;
+            timeout-ms = <30>;
         };
 
         ctrlf4 {
@@ -314,11 +343,13 @@
         backcomb {
             bindings = <&mkp MB4>;
             key-positions = <34 27>;
+            timeout-ms = <30>;
         };
 
         forwardcomb {
             bindings = <&mkp MB5>;
             key-positions = <28 34>;
+            timeout-ms = <30>;
         };
 
         leptclick {
@@ -349,11 +380,13 @@
         clearformat {
             bindings = <&formatctrlspace>;
             key-positions = <11 23>;
+            timeout-ms = <30>;
         };
 
         controltabright {
             bindings = <&kp LC(TAB)>;
             key-positions = <4 14>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <500>;
         };
 
@@ -365,16 +398,19 @@
         contextmernu {
             bindings = <&kp K_CONTEXT_MENU>;
             key-positions = <13 11>;
+            timeout-ms = <30>;
         };
 
         pipes {
             bindings = <&kp PIPE>;
             key-positions = <9 19>;
+            timeout-ms = <30>;
         };
 
         controltableft {
             bindings = <&kp LC(LS(TAB))>;
             key-positions = <3 13>;
+            timeout-ms = <30>;
             require-prior-idle-ms = <500>;
         };
     };
