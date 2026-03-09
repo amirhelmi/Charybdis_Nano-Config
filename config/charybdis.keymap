@@ -520,7 +520,7 @@
         new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(B) &kp W &kp N8 &kp N &kp B &kp Z &kp Q &kp LS(I) &kp V &kp N1 &kp N4 &kp F &kp V &kp LS(B) &kp P &kp LS(O) &kp LS(E) &kp A &kp N1 &kp X &kp O &kp J &kp A &kp LS(W) &kp L &kp LS(O) &kp S &kp I &kp LS(N) &kp Y &kp N1 &kp N2 &kp N0 &kp LS(G) &kp LS(D) &kp X &kp O &kp LS(O) &kp LS(U) &kp K &kp W &kp H &kp LS(U) &kp LS(C) &kp N2 &kp LS(Y) &kp N8 &kp J &kp I &kp L &kp LS(Y) &kp N &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(C) &kp LS(B) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp M &kp Q &kp E &kp I>;
+            bindings = <&kp N4 &kp LS(V) &kp LS(M) &kp D &kp A &kp LS(X) &kp LS(Q) &kp LS(V) &kp N2 &kp LS(Z) &kp LS(J) &kp U &kp LS(G) &kp LS(Q) &kp K &kp LS(W) &kp N &kp LS(G) &kp H &kp LS(L) &kp LS(T) &kp N4 &kp T &kp Z &kp LS(T) &kp LS(Y) &kp LS(C) &kp LS(X) &kp L &kp LS(X) &kp I &kp LS(H) &kp G &kp LS(X) &kp W &kp E &kp X &kp LS(I) &kp N3 &kp N9 &kp N7 &kp LS(T) &kp Z &kp N4 &kp R &kp N1 &kp G &kp B &kp LS(L) &kp LS(I) &kp W &kp N &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(C) &kp LS(C) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N2 &kp H &kp G &kp H>;
             label = "NEW_MACRO";
         };
     };
