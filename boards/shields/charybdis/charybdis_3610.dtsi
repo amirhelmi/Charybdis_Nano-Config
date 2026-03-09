@@ -37,6 +37,7 @@
         swap-xy;
         invert-x;
         invert-y;
+        force-awake;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
