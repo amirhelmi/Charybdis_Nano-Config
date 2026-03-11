@@ -32,7 +32,10 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        motion-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Pro Micro 0 (Moved from 24/Pin 5)
+        // motion-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Pro Micro 0 (Moved from 24/Pin 5)
+/* Some drivers use motion-gpios, others use irq-gpios */
+    irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; 
+    motion-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         /* Zephyr 4.1 requirements */
         zephyr,axis-x = <INPUT_REL_X>;
@@ -41,3 +44,5 @@
         smart-mode;
     };
 };
+
+
