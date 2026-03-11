@@ -34,7 +34,8 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-
+        irq-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Keep for backward compatibility
+        motion-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Required for ZMK 4.1
         /* Orientation settings moved from .conf to here */
         /* Uncomment these as needed for your specific build */
         // swap-xy;
@@ -46,3 +47,4 @@
         evt-type = <INPUT_EV_REL>;
     };
 };
+
