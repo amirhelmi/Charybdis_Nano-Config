@@ -33,18 +33,20 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        irq-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Keep for backward compatibility
-        motion-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Required for ZMK 4.1
-        /* Orientation settings moved from .conf to here */
-        /* Uncomment these as needed for your specific build */
-        // swap-xy;
-        // invert-x;
-        // invert-y;
+        /* * Use &gpio0 24 directly. ZMK 4.1 requires both properties 
+         * to point to the same interrupt pin.
+         */
+        irq-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        motion-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        
+         swap-xy;
+         invert-x;
+         invert-y;
         
         /* High performance/stability defaults */
         cpi = <600>;
         evt-type = <INPUT_EV_REL>;
     };
 };
+
 
