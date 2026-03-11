@@ -29,24 +29,27 @@
 
     trackball: trackball@0 {
         status = "okay";
-        /* Switch to native driver compatible string */
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        /* * Use &gpio0 24 directly. ZMK 4.1 requires both properties 
-         * to point to the same interrupt pin.
-         */
-        irq-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        
+        /* 1. Name changed from irq-gpios to motion-gpios */
         motion-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+        /* 2. Zephyr 4.1 REQUIRES explicit axis mapping */
+        zephyr,axis-x = <INPUT_REL_X>;
+        zephyr,axis-y = <INPUT_REL_Y>;
         
-         swap-xy;
-         invert-x;
-         invert-y;
+        swap-xy;
+        invert-x;
+        invert-y;
         
-        /* High performance/stability defaults */
-        cpi = <600>;
-        evt-type = <INPUT_EV_REL>;
+        /* 3. 'cpi' is now 'res-cpi' */
+        res-cpi = <600>;
+
+        /* 4. 'evt-type' has been completely removed from the driver */
+        
+        /* (Optional) High-performance mode is now set here, not in the .conf */
+        smart-mode;
     };
 };
-
-
