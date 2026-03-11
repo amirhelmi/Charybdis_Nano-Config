@@ -1,6 +1,7 @@
 #include "charybdis.dtsi"
 #include "charybdis_3610.dtsi"
 #include "split_input_common.dtsi"
+#include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
     col-offset = <5>;
@@ -31,3 +32,4 @@
     device = <&trackball>;
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_XY_SWAP)>;
 };
+
