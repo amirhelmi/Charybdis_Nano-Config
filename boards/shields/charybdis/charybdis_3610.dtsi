@@ -20,7 +20,7 @@
 };
 
 &spi0 {
-    status = "disabled";
+    status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
@@ -29,18 +29,20 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610-alt";
+        /* Switch to native driver compatible string */
+        compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <600>;
-        swap-xy;
-        invert-x;
-        invert-y;
-        force-awake;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-    };
+        irq-gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
+        /* Orientation settings moved from .conf to here */
+        /* Uncomment these as needed for your specific build */
+        // swap-xy;
+        // invert-x;
+        // invert-y;
+        
+        /* High performance/stability defaults */
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+    };
 };
