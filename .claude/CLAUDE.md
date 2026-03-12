@@ -12,7 +12,7 @@
 - Trackball data flows: PMW3610 → right half → host (or split bridge to left)
 
 ## Key File Paths
-- `config/west.yml` — West manifest (ZMK main branch, no external modules)
+- `config/west.yml` — West manifest (ZMK main + badjeff PMW3610 module)
 - `config/charybdis.conf` — Shared config (both halves)
 - `config/charybdis_left.conf` — Left half config
 - `config/charybdis_right.conf` — Right half config (trackball driver enabled here)
@@ -23,27 +23,34 @@
 - `boards/shields/charybdis/charybdis_left.overlay` — Left half overlay
 - `boards/shields/charybdis/split_input_common.dtsi` — Input processors (snipe/scroll layers)
 
-## PMW3610 Trackball (Zephyr Upstream Driver)
-Uses the **Zephyr upstream** PMW3610 driver (NOT an out-of-tree ZMK module).
+## PMW3610 Trackball — badjeff out-of-tree driver
+**IMPORTANT**: The Zephyr upstream PMW3610 driver (`pixart,pmw3610`) crashes BLE after 10-30 min on this board.
+Uses **badjeff/zmk-pmw3610-driver** instead (added in west.yml).
 
 ### Required Kconfig (in charybdis_right.conf)
 ```
 CONFIG_SPI=y
 CONFIG_INPUT=y
-CONFIG_INPUT_PMW3610=y   # auto-enabled via DT, but explicit is safer
+CONFIG_PMW3610_ALT=y
 CONFIG_ZMK_POINTING=y
 ```
-- Zephyr upstream Kconfig symbol is `INPUT_PMW3610` (NOT `PMW3610`)
-- It's `default y` when `DT_HAS_PIXART_PMW3610_ENABLED`, so it may auto-enable from devicetree
-- Out-of-tree drivers (badjeff) use `CONFIG_PMW3610_ALT`, inorichi uses `CONFIG_PMW3610`
 
-### Devicetree Properties (Zephyr upstream)
-- `compatible = "pixart,pmw3610"` — Zephyr upstream compatible string
-- `motion-gpios` — interrupt/motion pin (NOT `irq-gpios`, that's for out-of-tree drivers)
-- `zephyr,axis-x = <INPUT_REL_X>` — required by Zephyr 4.1+
-- `zephyr,axis-y = <INPUT_REL_Y>` — required by Zephyr 4.1+
-- `res-cpi` — resolution in CPI
-- `smart-mode` — smart motion detection
+### Devicetree Properties (badjeff driver)
+- `compatible = "pixart,pmw3610-alt"` — badjeff compatible string (avoids upstream conflict)
+- `irq-gpios` — interrupt pin (NOT `motion-gpios`, that's for Zephyr upstream)
+- `cpi = <600>` — resolution
+- `evt-type = <INPUT_EV_REL>`
+- `x-input-code = <INPUT_REL_X>`
+- `y-input-code = <INPUT_REL_Y>`
+
+### Driver Comparison (DO NOT use Zephyr upstream)
+| Property | Zephyr upstream (CRASHES) | badjeff (STABLE) |
+|---|---|---|
+| compatible | `pixart,pmw3610` | `pixart,pmw3610-alt` |
+| interrupt | `motion-gpios` | `irq-gpios` |
+| axis config | `zephyr,axis-x/y` | `evt-type`, `x/y-input-code` |
+| Kconfig | `INPUT_PMW3610` (auto) | `PMW3610_ALT` (explicit) |
+| west.yml | none needed | `badjeff/zmk-pmw3610-driver` |
 
 ### SPI Pin Assignments (charybdis_3610.dtsi)
 | Function | nRF GPIO | Pro Micro Pin |
@@ -52,19 +59,24 @@ CONFIG_ZMK_POINTING=y
 | MOSI     | P0.17    | 2             |
 | MISO     | P0.17    | 2 (same as MOSI — 3-wire SPI) |
 | CS       | P0.20    | 3             |
-| Motion   | P0.06    | 1             |
+| IRQ      | P0.06    | 1             |
 
 ### Critical Pin Conflict Notes
 - PMW3610 uses **3-wire SPI** (SDIO): MISO MUST equal MOSI (both P0.17)
 - CS must NOT be on P0.29 — that's Pro Micro 19, used by matrix column 0!
-- Motion must NOT be on P0.24 — that's Pro Micro 5, used by matrix row 1!
+- IRQ must NOT be on P0.24 — that's Pro Micro 5, used by matrix row 1!
 - Nice!Nano Pro Micro pin mapping: 0=P0.08, 1=P0.06, 2=P0.17, 3=P0.20, 4=P0.22, 5=P0.24, 6=P1.00, 7=P0.11, 8=P1.04, 9=P1.06, 10=P0.09, 18=P0.02, 19=P0.29, 20=P0.31
 
-### Common Pitfalls
-- Do NOT add `irq-gpios` — that property is for out-of-tree PMW3610 drivers (badjeff/inorichi forks)
-- The Zephyr upstream driver uses `motion-gpios` instead
-- The Zephyr Kconfig symbol is `INPUT_PMW3610` — `CONFIG_PMW3610` does NOT exist and will cause a build error
-- Always verify SPI pins don't overlap with key matrix pins (columns/rows use pro_micro connector)
+### Input Transform Notes
+- The Zephyr upstream driver axis mapping differs from out-of-tree drivers
+- With badjeff driver: XY_SWAP may or may not be needed depending on sensor orientation
+- Scroll on NAV layer: Y_INVERT was removed (scroll was inverted with it)
+
+## BLE Stability Notes
+- `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y` — REMOVED, conflicts with Zephyr 4.1 BLE stack
+- `CONFIG_ZMK_SLEEP=n` — sleep disabled to prevent disconnects
+- Stack sizes increased for BLE + PMW3610: `SYSTEM_WORKQUEUE_STACK_SIZE=4096`, `MAIN_STACK_SIZE=4096`
+- Bond reset procedure: flash settings_reset to BOTH halves, then reflash normal firmware, delete from PC Bluetooth, re-pair
 
 ## Layers
 | Index | Name | Purpose |
@@ -81,4 +93,4 @@ CONFIG_ZMK_POINTING=y
 ## Build
 - `build.yaml` targets: nice_nano/nrf52840/zmk with charybdis_left, charybdis_right, settings_reset
 - Uses ZMK's official GitHub Actions workflow (`zmkfirmware/zmk/.github/workflows/build-user-config.yml@main`)
-- West manifest tracks ZMK `main` branch (Zephyr 4.1+)
+- West manifest tracks ZMK `main` branch (Zephyr 4.1+) + badjeff PMW3610 module
