@@ -48,16 +48,23 @@ CONFIG_ZMK_POINTING=y
 ### SPI Pin Assignments (charybdis_3610.dtsi)
 | Function | nRF GPIO | Pro Micro Pin |
 |----------|----------|---------------|
-| SCK      | 0,8      | 1             |
-| MOSI     | 0,17     | 2             |
-| MISO     | 0,20     | 3             |
-| CS       | 0,29     | 14            |
-| Motion   | 0,6      | 0             |
+| SCK      | P0.08    | 0             |
+| MOSI     | P0.17    | 2             |
+| MISO     | P0.17    | 2 (same as MOSI — 3-wire SPI) |
+| CS       | P0.20    | 3             |
+| Motion   | P0.06    | 1             |
 
-### Common Pitfall
+### Critical Pin Conflict Notes
+- PMW3610 uses **3-wire SPI** (SDIO): MISO MUST equal MOSI (both P0.17)
+- CS must NOT be on P0.29 — that's Pro Micro 19, used by matrix column 0!
+- Motion must NOT be on P0.24 — that's Pro Micro 5, used by matrix row 1!
+- Nice!Nano Pro Micro pin mapping: 0=P0.08, 1=P0.06, 2=P0.17, 3=P0.20, 4=P0.22, 5=P0.24, 6=P1.00, 7=P0.11, 8=P1.04, 9=P1.06, 10=P0.09, 18=P0.02, 19=P0.29, 20=P0.31
+
+### Common Pitfalls
 - Do NOT add `irq-gpios` — that property is for out-of-tree PMW3610 drivers (badjeff/inorichi forks)
 - The Zephyr upstream driver uses `motion-gpios` instead
 - The Zephyr Kconfig symbol is `INPUT_PMW3610` — `CONFIG_PMW3610` does NOT exist and will cause a build error
+- Always verify SPI pins don't overlap with key matrix pins (columns/rows use pro_micro connector)
 
 ## Layers
 | Index | Name | Purpose |

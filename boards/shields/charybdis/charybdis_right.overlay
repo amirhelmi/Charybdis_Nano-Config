@@ -20,7 +20,7 @@
 
     row-gpios
         = <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 5 GPIO_ACTIVE_HIGH>  // Now safe! Trackball moved to Pin 0
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>  // Safe — trackball motion moved to Pro Micro 1 (P0.06)
         , <&pro_micro 4 GPIO_ACTIVE_HIGH>
         , <&pro_micro 9 GPIO_ACTIVE_HIGH>
         ;
