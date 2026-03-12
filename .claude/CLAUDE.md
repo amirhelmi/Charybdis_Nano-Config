@@ -67,10 +67,12 @@ CONFIG_ZMK_POINTING=y
 - IRQ must NOT be on P0.24 — that's Pro Micro 5, used by matrix row 1!
 - Nice!Nano Pro Micro pin mapping: 0=P0.08, 1=P0.06, 2=P0.17, 3=P0.20, 4=P0.22, 5=P0.24, 6=P1.00, 7=P0.11, 8=P1.04, 9=P1.06, 10=P0.09, 18=P0.02, 19=P0.29, 20=P0.31
 
-### Input Transform Notes
-- The Zephyr upstream driver axis mapping differs from out-of-tree drivers
-- With badjeff driver: XY_SWAP may or may not be needed depending on sensor orientation
-- Scroll on NAV layer: Y_INVERT was removed (scroll was inverted with it)
+### Input Transform Notes (badjeff driver)
+- **Main trackball** (charybdis_right.overlay): `X_INVERT | XY_SWAP` — no Y_INVERT
+- **Scroll layer** (split_input_common.dtsi): needs `Y_INVERT` before scalers
+- **Snipe layer**: no transform changes needed
+- badjeff driver reports axes differently from Zephyr upstream — when switching drivers, ALL transforms need revisiting
+- Clockwise circle should draw clockwise; if anticlockwise, one axis inversion is wrong
 
 ## BLE Stability Notes
 - `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y` — REMOVED, conflicts with Zephyr 4.1 BLE stack
