@@ -38,7 +38,7 @@ CONFIG_ZMK_POINTING=y
 ### Devicetree Properties (badjeff driver)
 - `compatible = "pixart,pmw3610-alt"` — badjeff compatible string (avoids upstream conflict)
 - `irq-gpios` — interrupt pin (NOT `motion-gpios`, that's for Zephyr upstream)
-- `cpi = <600>` — resolution
+- `cpi = <400>` — resolution (lowered from 600 to reduce BLE event pressure)
 - `evt-type = <INPUT_EV_REL>`
 - `x-input-code = <INPUT_REL_X>`
 - `y-input-code = <INPUT_REL_Y>`
@@ -68,7 +68,7 @@ CONFIG_ZMK_POINTING=y
 - Nice!Nano Pro Micro pin mapping: 0=P0.08, 1=P0.06, 2=P0.17, 3=P0.20, 4=P0.22, 5=P0.24, 6=P1.00, 7=P0.11, 8=P1.04, 9=P1.06, 10=P0.09, 18=P0.02, 19=P0.29, 20=P0.31
 
 ### Input Transform Notes (badjeff driver)
-- **Main trackball** (charybdis_right.overlay): `X_INVERT | XY_SWAP` — no Y_INVERT
+- **Main trackball** (charybdis_right.overlay): `X_INVERT | Y_INVERT | XY_SWAP`
 - **Scroll layer** (split_input_common.dtsi): needs `Y_INVERT` before scalers
 - **Snipe layer**: no transform changes needed
 - badjeff driver reports axes differently from Zephyr upstream — when switching drivers, ALL transforms need revisiting
@@ -77,8 +77,12 @@ CONFIG_ZMK_POINTING=y
 ## BLE Stability Notes
 - `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y` — REMOVED, conflicts with Zephyr 4.1 BLE stack
 - `CONFIG_ZMK_SLEEP=n` — sleep disabled to prevent disconnects
-- Stack sizes increased for BLE + PMW3610: `SYSTEM_WORKQUEUE_STACK_SIZE=4096`, `MAIN_STACK_SIZE=4096`
+- Stack sizes increased for BLE + PMW3610: `SYSTEM_WORKQUEUE_STACK_SIZE=8192`, `MAIN_STACK_SIZE=8192` (4096 was too small, caused crashes)
+- BLE connection intervals relaxed: `MIN_INT=12` (15ms), `MAX_INT=24` (30ms) — aggressive intervals (6/12) overwhelm BLE with trackball data
+- BLE ACL buffers increased: `TX_SIZE=69`, `TX_COUNT=8`, `RX_SIZE=69`, `RX_COUNT=8` — needed for bursty trackball events
+- CPI lowered to 400 (from 600) to reduce trackball event rate over BLE
 - Bond reset procedure: flash settings_reset to BOTH halves, then reflash normal firmware, delete from PC Bluetooth, re-pair
+- **Both** the upstream Zephyr driver AND insufficient BLE tuning can cause crashes — switching to badjeff driver alone is not enough without the buffer/stack/interval fixes
 
 ## Layers
 | Index | Name | Purpose |
