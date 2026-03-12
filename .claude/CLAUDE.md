@@ -30,9 +30,12 @@ Uses the **Zephyr upstream** PMW3610 driver (NOT an out-of-tree ZMK module).
 ```
 CONFIG_SPI=y
 CONFIG_INPUT=y
-CONFIG_PMW3610=y
+CONFIG_INPUT_PMW3610=y   # auto-enabled via DT, but explicit is safer
 CONFIG_ZMK_POINTING=y
 ```
+- Zephyr upstream Kconfig symbol is `INPUT_PMW3610` (NOT `PMW3610`)
+- It's `default y` when `DT_HAS_PIXART_PMW3610_ENABLED`, so it may auto-enable from devicetree
+- Out-of-tree drivers (badjeff) use `CONFIG_PMW3610_ALT`, inorichi uses `CONFIG_PMW3610`
 
 ### Devicetree Properties (Zephyr upstream)
 - `compatible = "pixart,pmw3610"` — Zephyr upstream compatible string
@@ -54,7 +57,7 @@ CONFIG_ZMK_POINTING=y
 ### Common Pitfall
 - Do NOT add `irq-gpios` — that property is for out-of-tree PMW3610 drivers (badjeff/inorichi forks)
 - The Zephyr upstream driver uses `motion-gpios` instead
-- Forgetting `CONFIG_PMW3610=y` means the driver won't compile and the trackball silently won't work
+- The Zephyr Kconfig symbol is `INPUT_PMW3610` — `CONFIG_PMW3610` does NOT exist and will cause a build error
 
 ## Layers
 | Index | Name | Purpose |
