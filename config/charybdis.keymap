@@ -54,38 +54,14 @@
 
 / {
     behaviors {
-
-
-    /* * Smart Shift:
+        /* * Smart Shift:
          * Tap for Sticky Shift, Double Tap for Caps Word
          */
-        smart_shift: smart_shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;
-            mods = <(MOD_LSFT)>;
-        };
-
         /* * Magic Thumb:
          * Tap: Repeat (or Smart Shift if pressed after a key)
          * Hold: NUM Layer
          */
-        magic: magic_thumb {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>; // Important for repeat
-            bindings = <&mo>, <&smart_repeat>;
-        };
-
         /* Optional: urob's Smart Repeat */
-        smart_repeat: smart_repeat {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&key_repeat>, <&smart_shift>;
-            mods = <(MOD_LSFT)>;
-        };
 
         back_home: back_home {
             compatible = "zmk,behavior-hold-tap";
@@ -95,17 +71,6 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-        };
-
-        rightclick_appmenu: rightclick_appmenu {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHTCLICK_APPMENU";
-            bindings = <&kp>, <&mkp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <180>;
         };
 
         keyrepeat_layernum: keyrepeat_layernum {
@@ -563,10 +528,10 @@
 
         default_layer {
             bindings = <
-  &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z        &kp F                    &kp O        &kp U         &kp SLASH
-  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                    &kp E        &kp I         &kp A
-  &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X        &lt 6 H                  &lt 5 COMMA  &lt 2 PERIOD  &kp APOS
-                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &magic NUM 0
+  &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z        &kp F                      &kp O        &kp U         &kp SLASH
+  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                      &kp E        &kp I         &kp A
+  &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X        &lt 6 H                    &lt 5 COMMA  &lt 2 PERIOD  &kp APOS
+                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &keyrepeat_layernum NUM 0
             >;
         };
 
@@ -581,10 +546,10 @@
 
         nav_layer {
             bindings = <
-  &none   &none         &trans     &trans          &none     &none     &none            &kp UP_ARROW   &none              &none
-  &trans  &kp LEFT_ALT  &trans     &trans          &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
-  &none   &none         &none      &none           &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none
-                        &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans    &trans
+  &none   &none         &trans     &trans  &none     &none     &none            &kp UP_ARROW   &none              &none
+  &trans  &kp LEFT_ALT  &trans     &trans  &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
+  &none   &none         &none      &none   &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none
+                        &kp LCTRL  &trans  &trans    &trans    &trans
             >;
         };
 
