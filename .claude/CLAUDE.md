@@ -79,7 +79,7 @@ CONFIG_ZMK_POINTING=y
 - `CONFIG_ZMK_SLEEP=n` — sleep disabled to prevent disconnects
 - Stack sizes increased for BLE + PMW3610: `SYSTEM_WORKQUEUE_STACK_SIZE=8192`, `MAIN_STACK_SIZE=8192` (4096 was too small, caused crashes)
 - BLE connection intervals relaxed: `MIN_INT=12` (15ms), `MAX_INT=24` (30ms) — aggressive intervals (6/12) overwhelm BLE with trackball data
-- BLE ACL buffers increased: `TX_SIZE=69`, `TX_COUNT=8`, `RX_SIZE=69`, `RX_COUNT=8` — needed for bursty trackball events
+- BLE ACL buffers increased: `TX_SIZE=69`, `TX_COUNT=8`, `RX_SIZE=69`, `RX_COUNT_EXTRA=5` — needed for bursty trackball events (RX_COUNT deprecated in Zephyr 4.1, replaced by _EXTRA)
 - CPI lowered to 400 (from 600) to reduce trackball event rate over BLE
 - Bond reset procedure: flash settings_reset to BOTH halves, then reflash normal firmware, delete from PC Bluetooth, re-pair
 - **Both** the upstream Zephyr driver AND insufficient BLE tuning can cause crashes — switching to badjeff driver alone is not enough without the buffer/stack/interval fixes
