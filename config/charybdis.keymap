@@ -54,6 +54,39 @@
 
 / {
     behaviors {
+
+
+    /* * Smart Shift:
+         * Tap for Sticky Shift, Double Tap for Caps Word
+         */
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        /* * Magic Thumb:
+         * Tap: Repeat (or Smart Shift if pressed after a key)
+         * Hold: NUM Layer
+         */
+        magic: magic_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>; // Important for repeat
+            bindings = <&mo>, <&smart_repeat>;
+        };
+
+        /* Optional: urob's Smart Repeat */
+        smart_repeat: smart_repeat {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&key_repeat>, <&smart_shift>;
+            mods = <(MOD_LSFT)>;
+        };
+
         back_home: back_home {
             compatible = "zmk,behavior-hold-tap";
             label = "BACK_HOME";
@@ -533,7 +566,7 @@
   &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z        &kp F                    &kp O        &kp U         &kp SLASH
   &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                    &kp E        &kp I         &kp A
   &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X        &lt 6 H                  &lt 5 COMMA  &lt 2 PERIOD  &kp APOS
-                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &keyrepeat_layernum 1 0
+                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &magic NUM 0
             >;
         };
 
