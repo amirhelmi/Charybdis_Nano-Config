@@ -65,7 +65,6 @@
 
         back_home: back_home {
             compatible = "zmk,behavior-hold-tap";
-            label = "BACK_HOME";
             bindings = <&althome>, <&altleft>;
 
             #binding-cells = <2>;
@@ -75,7 +74,6 @@
 
         keyrepeat_layernum: keyrepeat_layernum {
             compatible = "zmk,behavior-hold-tap";
-            label = "KEYREPEAT_LAYERNUM";
             bindings = <&mo>, <&key_repeat>;
 
             #binding-cells = <2>;
@@ -434,28 +432,24 @@
                 <&macro_release>,
                 <&mo 3 &kp LEFT_WIN>;
 
-            label = "SWITCHWIN";
-        };
+};
 
         info: info {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp I &kp N &kp F &kp O &kp LPAR &kp SQT &kp FSLH &kp FSLH &kp SQT &kp RPAR &kp LEFT>;
-            label = "INFO";
         };
 
         statement: statement {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RET &kp LEFT_BRACE &kp RET &kp RBRC &kp UP_ARROW &kp ENTER>;
-            label = "STATEMENT";
         };
 
         value: value {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(V) &kp LS(A) &kp LS(L) &kp LS(U) &kp LS(E) &kp LPAR &kp O &kp B &kp J &kp E &kp C &kp T>;
-            label = "VALUE";
             wait-ms = <50>;
         };
 
@@ -463,21 +457,18 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(T) &kp R &kp A &kp C &kp K &kp B &kp A &kp L &kp L &kp LS(G) &kp L &kp O &kp V &kp E &kp N3 &kp N5 &kp LS(E) &kp N &kp D &kp LS(G) &kp A &kp M &kp E>;
-            label = "SLOGAN";
         };
 
         repand: repand {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(S) &kp Y &kp N &kp C &kp H &kp R &kp O &kp N &kp I &kp Z &kp E &kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp DLLR &kp PRCNT &kp CARET &kp PLUS>;
-            label = "REPAND";
         };
 
         altone: altone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp NUMBER_1>;
-            label = "ALTONE";
             wait-ms = <50>;
         };
 
@@ -485,7 +476,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp NUMBER_0>;
-            label = "ALTZERO";
             wait-ms = <50>;
         };
 
@@ -493,28 +483,24 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp HOME>;
-            label = "ALTHOME";
         };
 
         altleft: altleft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp LEFT>;
-            label = "ALTLEFT";
         };
 
         formatctrlspace: formatctrlspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LCTRL &kp SPACE>;
-            label = "FORMATCTRLSPACE";
         };
 
         alt_wait_tab: alt_wait_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp TAB>;
-            label = "ALT_WAIT_TAB";
             wait-ms = <50>;
         };
 
@@ -522,14 +508,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 0 &kp ESCAPE>;
-            label = "TO_BASE_ESCAPE";
         };
 
         new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N4 &kp LS(V) &kp LS(M) &kp D &kp A &kp LS(X) &kp LS(Q) &kp LS(V) &kp N2 &kp LS(Z) &kp LS(J) &kp U &kp LS(G) &kp LS(Q) &kp K &kp LS(W) &kp N &kp LS(G) &kp H &kp LS(L) &kp LS(T) &kp N4 &kp T &kp Z &kp LS(T) &kp LS(Y) &kp LS(C) &kp LS(X) &kp L &kp LS(X) &kp I &kp LS(H) &kp G &kp LS(X) &kp W &kp E &kp X &kp LS(I) &kp N3 &kp N9 &kp N7 &kp LS(T) &kp Z &kp N4 &kp R &kp N1 &kp G &kp B &kp LS(L) &kp LS(I) &kp W &kp N &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(C) &kp LS(C) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N2 &kp H &kp G &kp H>;
-            label = "NEW_MACRO";
         };
     };
 
