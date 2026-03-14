@@ -54,15 +54,15 @@
 
 / {
     behaviors {
-
-
-    /* * Smart Shift:
+        /* * Smart Shift:
          * Tap for Sticky Shift, Double Tap for Caps Word
          */
+
         smart_shift: smart_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&caps_word>;
+
             mods = <(MOD_LSFT)>;
         };
 
@@ -70,6 +70,7 @@
          * Tap: Repeat (or Smart Shift if pressed after a key)
          * Hold: NUM Layer
          */
+
         magic: magic_thumb {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -80,10 +81,12 @@
         };
 
         /* Optional: urob's Smart Repeat */
+
         smart_repeat: smart_repeat {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&key_repeat>, <&smart_shift>;
+
             mods = <(MOD_LSFT)>;
         };
 
@@ -446,6 +449,11 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <500>;
         };
+
+        star {
+            bindings = <&kp ASTERISK>;
+            key-positions = <19 29>;
+        };
     };
 
     macros {
@@ -563,10 +571,10 @@
 
         default_layer {
             bindings = <
-  &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z        &kp F                    &kp O        &kp U         &kp SLASH
-  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                    &kp E        &kp I         &kp A
-  &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X        &lt 6 H                  &lt 5 COMMA  &lt 2 PERIOD  &kp APOS
-                &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &magic NUM 0
+  &kp Q  &kp L  &kp Y            &kp P      &kp B      &kp Z        &kp F         &kp O        &kp U         &kp SLASH
+  &kp C  &kp R  &lt 2 S          &kp T      &kp G      &kp M        &kp N         &kp E        &kp I         &kp A
+  &kp W  &kp J  &lt 5 V          &kp D      &kp K      &kp X        &lt 2 H       &lt 5 COMMA  &lt 2 PERIOD  &kp APOS
+                &mt LCTRL SPACE  &mkp LCLK  &kp TAB    &kp LS(TAB)  &magic NUM 0
             >;
         };
 
@@ -582,9 +590,9 @@
         nav_layer {
             bindings = <
   &none   &none         &trans     &trans          &none     &none     &none            &kp UP_ARROW   &none              &none
-  &trans  &kp LEFT_ALT  &trans     &trans          &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
+  &trans  &kp LEFT_ALT  &trans     &kp LEFT_SHIFT  &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END
   &none   &none         &none      &none           &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none
-                        &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans    &trans
+                        &kp LCTRL  &trans          &trans    &trans    &mkp LCLK
             >;
         };
 
