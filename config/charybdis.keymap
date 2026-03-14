@@ -178,9 +178,8 @@
 
         backspaced {
             bindings = <&kp BACKSPACE>;
-            key-positions = <16 26>;
+            key-positions = <17 27>;
             timeout-ms = <25>;
-            require-prior-idle-ms = <500>;
         };
 
         plus {
@@ -254,9 +253,9 @@
             timeout-ms = <30>;
         };
 
-        bspace {
+        ctrlbspace {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <17 27>;
+            key-positions = <16 26>;
             timeout-ms = <25>;
         };
 
@@ -431,8 +430,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 3 &kp LEFT_WIN>;
-
-};
+        };
 
         info: info {
             compatible = "zmk,behavior-macro";
