@@ -411,6 +411,11 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <500>;
         };
+
+        star {
+            bindings = <&kp STAR>;
+            key-positions = <29 19>;
+        };
     };
 
     macros {
