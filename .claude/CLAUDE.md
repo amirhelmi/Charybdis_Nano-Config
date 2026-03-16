@@ -12,7 +12,7 @@
 - Trackball data flows: PMW3610 → right half → host (or split bridge to left)
 
 ## Key File Paths
-- `config/west.yml` — West manifest (ZMK main + badjeff PMW3610 module)
+- `config/west.yml` — West manifest (ZMK v0.3 + badjeff PMW3610 module)
 - `config/charybdis.conf` — Shared config (both halves)
 - `config/charybdis_left.conf` — Left half config
 - `config/charybdis_right.conf` — Right half config (trackball driver enabled here)
@@ -99,4 +99,4 @@ CONFIG_ZMK_POINTING=y
 ## Build
 - `build.yaml` targets: nice_nano/nrf52840/zmk with charybdis_left, charybdis_right, settings_reset
 - Uses ZMK's official GitHub Actions workflow (`zmkfirmware/zmk/.github/workflows/build-user-config.yml@main`)
-- West manifest tracks ZMK `main` branch (Zephyr 4.1+) + badjeff PMW3610 module
+- West manifest tracks ZMK `v0.3` tag (pinned) + badjeff PMW3610 module
